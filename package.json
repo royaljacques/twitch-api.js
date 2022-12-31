@@ -1,0 +1,26 @@
+{
+  "name": "twitchapijs",
+  "version": "1.0.0",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/ws": "^8.5.3",
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.4",
+    "ws": "^8.11.0"
+  },
+  "outDir": "build",
+  "scripts": {
+    "build": "tsc -w",
+    "start": "nodemon build/index.js",
+    "test": "nodemon build/test.js"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
