@@ -14,9 +14,7 @@
   },
   "outDir": "build",
   "scripts": {
-    "build": "tsc -w",
-    "start": "nodemon build/index.js",
-    "test": "nodemon build/test.js"
+
   },
   "main": "index.js",
   "keywords": [],
