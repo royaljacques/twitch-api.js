@@ -1,5 +1,5 @@
 {
-  "name": "twitchapi.js",
+  "name": "@twitchapi.js/twitchapi.js",
   "version": "1.0.0",
   "devDependencies": {
     "typescript": "^4.9.4"
