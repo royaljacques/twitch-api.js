@@ -3,5 +3,6 @@
   "out": "docs/Web Server/",
   "readme": "README.md",
   "name": "twitchapi doc",
-  "tsconfig": "./tsconfig.json"
+  "tsconfig": "./tsconfig.json",
+  "githubPages" : false
 }

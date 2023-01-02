@@ -14,10 +14,11 @@
     "ws": "^8.11.0"
   },
   "scripts": {
-    "doc": "typedoc src/twitchapi.ts src/events.ts src/sockets/* src/sockets/eventsub/subscriptions/* src/utils/*"
+    "doc": "typedoc src/twitchapi.ts src/events.ts src/sockets/* src/sockets/eventsub/subscriptions/* src/utils/* --out ../documentation"
   },
   "outDir": "build",
   "main": "src/twitchapi.ts",
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
