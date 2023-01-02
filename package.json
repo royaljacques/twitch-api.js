@@ -1,6 +1,6 @@
 {
   "name": "twitchapi.js",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "devDependencies": {
     "typedoc": "^0.23.23",
     "typescript": "^4.9.4"
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "tsc -w",
-    "doc": "typedoc src/twitchapi.ts src/events.ts src/sockets/* src/sockets/eventsub/subscriptions/* src/utils/* --out ../documentation"
+    "doc": "typedoc src/twitchapi.ts src/events.ts src/sockets/* src/sockets/eventsub/subscriptions/* src/utils/* --out ../documentation",
+    "publish": "npm publish --access=public"
   },
   "outDir": "build",
   "main": "build/twitchapi.js",

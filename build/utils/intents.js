@@ -6,6 +6,7 @@ exports.Intents = void 0;
  */
 var Intents;
 (function (Intents) {
-    Intents[Intents["CustomRewardRedemption"] = 0] = "CustomRewardRedemption";
+    Intents[Intents["CustomRewardRedemptionAdd"] = 0] = "CustomRewardRedemptionAdd";
+    Intents[Intents["ChanneUpdate"] = 1] = "ChanneUpdate";
 })(Intents = exports.Intents || (exports.Intents = {}));
 //# sourceMappingURL=intents.js.map

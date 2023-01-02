@@ -1,5 +1,6 @@
 import {Intents} from "../utils/intents";
-import {Custom_reward_redemption} from './eventsub/subscriptions/custom_reward_redemption';
+import {CustomRewardRedemption} from './eventsub/subscriptions/customRewardRedemption';
+import {ChannelUpdate} from "./eventsub/subscriptions/channelUpdate";
 export class SocketManager{
 
     private intents: Array<any>;
@@ -25,12 +26,17 @@ export class SocketManager{
      * connect into event by socket
      */
     connectToEvents(){
-        console.log(this.intents)
+        let props = {token: this.token, userId: this.userId, clientId: this.clientId, sessionId: this.sessionId};
         this.intents.forEach(intents => {
             switch (intents){
-                case Intents.CustomRewardRedemption:
-                    let rewardRedemption = new Custom_reward_redemption({token: this.token, userId: this.userId, clientId: this.clientId, sessionId: this.sessionId})
+                case Intents.CustomRewardRedemptionAdd:
+                    let rewardRedemption = new CustomRewardRedemption(props)
                     rewardRedemption.addReward().then(r => console.log("reward redemption succefuly added "));
+                    break;
+                case Intents.ChanneUpdate:
+                    let channelUpdateClass = new ChannelUpdate(props)
+                    channelUpdateClass.addChannelUpdateEvent().then(e => console.log("channel update succefuly added "));
+                    break;
             }
         })
 
