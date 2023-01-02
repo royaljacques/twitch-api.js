@@ -1,4 +1,6 @@
-## twitchapi.js
+## twitchapi.js 
+
+`version 1.0.0`
 
 
 twitchapi.js is a node js library written in typescript allowing to read the events of your twitch streams and to interact with them.
