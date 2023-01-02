@@ -13,9 +13,6 @@
     "ws": "^8.11.0"
   },
   "outDir": "build",
-  "scripts": {
-
-  },
   "main": "index.js",
   "keywords": [],
   "author": "",

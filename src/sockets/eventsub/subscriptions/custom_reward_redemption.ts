@@ -4,7 +4,7 @@ export class Custom_reward_redemption extends BaseSocket{
 
     async addReward(){
         try {
-            const request = await axios.post(
+            await axios.post(
                 "https://api.twitch.tv/helix/eventsub/subscriptions",
                 {
                     type: "channel.channel_points_custom_reward_redemption.add",
@@ -26,6 +26,7 @@ export class Custom_reward_redemption extends BaseSocket{
                 }
             );
         } catch (e) {
+            console.log(e)
         }
 
     }
