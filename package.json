@@ -14,7 +14,7 @@
     "ws": "^8.11.0"
   },
   "scripts": {
-    "doc": "typedoc --entryPointStrategy packages . src/*"
+    "doc": "typedoc src/twitchapi.ts src/events.ts src/sockets/* src/sockets/eventsub/subscriptions/* src/utils/*"
   },
   "outDir": "build",
   "main": "src/twitchapi.ts",

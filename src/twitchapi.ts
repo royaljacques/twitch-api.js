@@ -26,7 +26,7 @@ export class twitchapi extends EventEmitter{
     }
 
     /**
-     * create connection
+     * create connection into twitch
      * @param option
      */
     login(option: {token: string, clientId: string, userId: string}){
