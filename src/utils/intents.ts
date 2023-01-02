@@ -4,4 +4,5 @@
 export enum Intents{
     CustomRewardRedemptionAdd = 0,
     ChanneUpdate= 1,
+    ChannelFollow= 2
 }

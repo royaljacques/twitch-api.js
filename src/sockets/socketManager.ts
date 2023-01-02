@@ -1,6 +1,7 @@
 import {Intents} from "../utils/intents";
 import {CustomRewardRedemption} from './eventsub/subscriptions/customRewardRedemption';
 import {ChannelUpdate} from "./eventsub/subscriptions/channelUpdate";
+import {ChannelFollow} from "./eventsub/subscriptions/channelFollow";
 export class SocketManager{
 
     private intents: Array<any>;
@@ -36,6 +37,10 @@ export class SocketManager{
                 case Intents.ChanneUpdate:
                     let channelUpdateClass = new ChannelUpdate(props)
                     channelUpdateClass.addChannelUpdateEvent().then(e => console.log("channel update succefuly added "));
+                    break;
+                case Intents.ChannelFollow:
+                    let channelFollow = new ChannelFollow(props);
+                    channelFollow.addChannelFollow().then(r => console.log("channel follow succesfully added"));
                     break;
             }
         })

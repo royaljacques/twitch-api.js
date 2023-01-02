@@ -54,15 +54,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChannelUpdate = void 0;
+exports.ChannelFollow = void 0;
 var baseSocket_1 = require("./baseSocket");
 var axios_1 = __importDefault(require("axios"));
-var ChannelUpdate = /** @class */ (function (_super) {
-    __extends(ChannelUpdate, _super);
-    function ChannelUpdate() {
+var ChannelFollow = /** @class */ (function (_super) {
+    __extends(ChannelFollow, _super);
+    function ChannelFollow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    ChannelUpdate.prototype.addChannelUpdateEvent = function () {
+    ChannelFollow.prototype.addChannelFollow = function () {
         return __awaiter(this, void 0, void 0, function () {
             var e_1;
             return __generator(this, function (_a) {
@@ -70,7 +70,7 @@ var ChannelUpdate = /** @class */ (function (_super) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
                         return [4 /*yield*/, axios_1.default.post("https://api.twitch.tv/helix/eventsub/subscriptions", {
-                                type: "channel.update",
+                                type: "channel.follow",
                                 version: 1,
                                 transport: {
                                     method: "websocket",
@@ -98,7 +98,7 @@ var ChannelUpdate = /** @class */ (function (_super) {
             });
         });
     };
-    return ChannelUpdate;
+    return ChannelFollow;
 }(baseSocket_1.BaseSocket));
-exports.ChannelUpdate = ChannelUpdate;
-//# sourceMappingURL=channelUpdate.js.map
+exports.ChannelFollow = ChannelFollow;
+//# sourceMappingURL=channelFollow.js.map

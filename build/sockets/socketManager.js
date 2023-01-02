@@ -4,6 +4,7 @@ exports.SocketManager = void 0;
 var intents_1 = require("../utils/intents");
 var customRewardRedemption_1 = require("./eventsub/subscriptions/customRewardRedemption");
 var channelUpdate_1 = require("./eventsub/subscriptions/channelUpdate");
+var channelFollow_1 = require("./eventsub/subscriptions/channelFollow");
 var SocketManager = /** @class */ (function () {
     /**
      *
@@ -31,6 +32,10 @@ var SocketManager = /** @class */ (function () {
                 case intents_1.Intents.ChanneUpdate:
                     var channelUpdateClass = new channelUpdate_1.ChannelUpdate(props);
                     channelUpdateClass.addChannelUpdateEvent().then(function (e) { return console.log("channel update succefuly added "); });
+                    break;
+                case intents_1.Intents.ChannelFollow:
+                    var channelFollow = new channelFollow_1.ChannelFollow(props);
+                    channelFollow.addChannelFollow().then(function (r) { return console.log("channel follow succesfully added"); });
                     break;
             }
         });
