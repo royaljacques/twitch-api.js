@@ -21,7 +21,7 @@
   "outDir": "build",
   "main": "build/twitchapi.js",
   "types": "build/twitchapi.d.ts",
-  "type": "module",
+  "type": "commonjs",
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -1,5 +1,5 @@
 import {BaseSocket} from "./baseSocket";
-import axios from "axios/index";
+import axios from "axios";
 
 export class ChannelUpdate extends BaseSocket{
     async addChannelUpdateEvent(){
