@@ -5,11 +5,16 @@
     "sourceMap": true,
     "outDir": "build",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
+
   "exclude": [
-    "node_modules",
-    "build"
+    "node_modules/*",
+    "build/"
   ],
+  "include": [
+    "src/*"
+  ]
 
 }

@@ -2,6 +2,7 @@
   "name": "@twitchapi.js/twitchapi.js",
   "version": "1.0.0",
   "devDependencies": {
+    "typedoc": "^0.23.23",
     "typescript": "^4.9.4"
   },
   "dependencies": {
@@ -12,8 +13,11 @@
     "socket.io": "^4.5.4",
     "ws": "^8.11.0"
   },
+  "scripts": {
+    "doc": "typedoc --entryPointStrategy packages . src/*"
+  },
   "outDir": "build",
-  "main": "index.js",
+  "main": "src/twitchapi.ts",
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -7,6 +7,11 @@ export class SocketManager{
     public token;
     public clientId;
     public userId;
+
+    /**
+     *
+     * @param props: {intents: Array<any>, token: string, clientId: string, userId: string, sessionId: string}
+     */
     constructor(props: {intents: Array<any>, token: string, clientId: string, userId: string, sessionId: string}) {
         this.sessionId = props.sessionId;
         this.token = props.token;
@@ -15,6 +20,10 @@ export class SocketManager{
         this.intents = props.intents;
     }
 
+    /**
+     * @private
+     * connect into event by socket
+     */
     connectToEvents(){
         console.log(this.intents)
         this.intents.forEach(intents => {
