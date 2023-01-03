@@ -2,6 +2,8 @@ import {Intents} from "../utils/intents";
 import {CustomRewardRedemption} from './eventsub/subscriptions/customRewardRedemption';
 import {ChannelUpdate} from "./eventsub/subscriptions/channelUpdate";
 import {ChannelFollow} from "./eventsub/subscriptions/channelFollow";
+import {ChannelSubscribe} from "./eventsub/subscriptions/channelSubscribe";
+import {ChannelSubscriptionEnd} from "./eventsub/subscriptions/channelSubscriptionEnd";
 export class SocketManager{
 
     private intents: Array<any>;
@@ -32,15 +34,23 @@ export class SocketManager{
             switch (intents){
                 case Intents.CustomRewardRedemptionAdd:
                     let rewardRedemption = new CustomRewardRedemption(props)
-                    rewardRedemption.addReward().then(r => console.log("reward redemption succefuly added "));
+                    rewardRedemption.addReward().then(r => {});
                     break;
                 case Intents.ChanneUpdate:
                     let channelUpdateClass = new ChannelUpdate(props)
-                    channelUpdateClass.addChannelUpdateEvent().then(e => console.log("channel update succefuly added "));
+                    channelUpdateClass.addChannelUpdateEvent().then(e => {});
                     break;
                 case Intents.ChannelFollow:
                     let channelFollow = new ChannelFollow(props);
-                    channelFollow.addChannelFollow().then(r => console.log("channel follow succesfully added"));
+                    channelFollow.addChannelFollow().then(r => {});
+                    break;
+                case Intents.ChannelSubscribe:
+                    let channelsub = new ChannelSubscribe(props);
+                    channelsub.addChannelSubscribe().then(r => {})
+                    break;
+                case Intents.channelSubscriptionEnd:
+                    let channelSubEnd = new ChannelSubscriptionEnd(props);
+                    channelSubEnd.addChannelSubEnd().then(r => {});
                     break;
             }
         })

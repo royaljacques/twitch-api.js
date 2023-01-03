@@ -1,13 +1,13 @@
-import {BaseSocket} from "./baseSocket";
 import axios from "axios";
+import {BaseSocket} from "./baseSocket";
 
-export class ChannelFollow extends BaseSocket{
-    async addChannelFollow(){
+export class ChannelSubscriptionEnd extends BaseSocket{
+    async addChannelSubEnd(){
         try {
             await axios.post(
                 "https://api.twitch.tv/helix/eventsub/subscriptions",
                 {
-                    type: "channel.follow",
+                    type: "channel.subscription.end",
                     version: 1,
                     transport: {
                         method: "websocket",

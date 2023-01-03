@@ -14,7 +14,7 @@ export declare class twitchapi extends EventEmitter {
      */
     constructor(props: any);
     /**
-     * create connection into twitch
+     * create connection into twitch using your token
      * @param option
      */
     login(option: {

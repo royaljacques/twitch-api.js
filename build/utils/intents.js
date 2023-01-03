@@ -9,5 +9,7 @@ var Intents;
     Intents[Intents["CustomRewardRedemptionAdd"] = 0] = "CustomRewardRedemptionAdd";
     Intents[Intents["ChanneUpdate"] = 1] = "ChanneUpdate";
     Intents[Intents["ChannelFollow"] = 2] = "ChannelFollow";
+    Intents[Intents["ChannelSubscribe"] = 3] = "ChannelSubscribe";
+    Intents[Intents["channelSubscriptionEnd"] = 4] = "channelSubscriptionEnd";
 })(Intents = exports.Intents || (exports.Intents = {}));
 //# sourceMappingURL=intents.js.map

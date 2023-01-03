@@ -7,4 +7,6 @@ export declare interface events{
     "open": any;
     "channel.update": any;
     "channel.follow": any;
+    "channel.subscribe": any;
+    "channel.subscription.end": any;
 }

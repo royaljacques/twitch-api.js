@@ -1,7 +1,7 @@
 import {EventEmitter} from "node:events";
 import {events} from "./events";
 import {WebSocket} from "ws";
-import {Intents} from "./utils/intents";
+
 import {SocketManager} from "./sockets/socketManager";
 
 const client = new WebSocket("wss://eventsub-beta.wss.twitch.tv/ws");
@@ -20,13 +20,12 @@ export class twitchapi extends EventEmitter{
      * @param props
      */
     constructor(props) {
-        // @ts-ignore
         super(props);
         this.intents = props.intents
     }
 
     /**
-     * create connection into twitch
+     * create connection into twitch using your token
      * @param option
      */
     login(option: {token: string, clientId: string, userId: string}){

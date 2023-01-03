@@ -5,6 +5,8 @@ var intents_1 = require("../utils/intents");
 var customRewardRedemption_1 = require("./eventsub/subscriptions/customRewardRedemption");
 var channelUpdate_1 = require("./eventsub/subscriptions/channelUpdate");
 var channelFollow_1 = require("./eventsub/subscriptions/channelFollow");
+var channelSubscribe_1 = require("./eventsub/subscriptions/channelSubscribe");
+var channelSubscriptionEnd_1 = require("./eventsub/subscriptions/channelSubscriptionEnd");
 var SocketManager = /** @class */ (function () {
     /**
      *
@@ -27,15 +29,23 @@ var SocketManager = /** @class */ (function () {
             switch (intents) {
                 case intents_1.Intents.CustomRewardRedemptionAdd:
                     var rewardRedemption = new customRewardRedemption_1.CustomRewardRedemption(props);
-                    rewardRedemption.addReward().then(function (r) { return console.log("reward redemption succefuly added "); });
+                    rewardRedemption.addReward().then(function (r) { });
                     break;
                 case intents_1.Intents.ChanneUpdate:
                     var channelUpdateClass = new channelUpdate_1.ChannelUpdate(props);
-                    channelUpdateClass.addChannelUpdateEvent().then(function (e) { return console.log("channel update succefuly added "); });
+                    channelUpdateClass.addChannelUpdateEvent().then(function (e) { });
                     break;
                 case intents_1.Intents.ChannelFollow:
                     var channelFollow = new channelFollow_1.ChannelFollow(props);
-                    channelFollow.addChannelFollow().then(function (r) { return console.log("channel follow succesfully added"); });
+                    channelFollow.addChannelFollow().then(function (r) { });
+                    break;
+                case intents_1.Intents.ChannelSubscribe:
+                    var channelsub = new channelSubscribe_1.ChannelSubscribe(props);
+                    channelsub.addChannelSubscribe().then(function (r) { });
+                    break;
+                case intents_1.Intents.channelSubscriptionEnd:
+                    var channelSubEnd = new channelSubscriptionEnd_1.ChannelSubscriptionEnd(props);
+                    channelSubEnd.addChannelSubEnd().then(function (r) { });
                     break;
             }
         });
