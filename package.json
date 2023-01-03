@@ -16,7 +16,8 @@
   "scripts": {
     "build": "tsc -w",
     "doc": "typedoc src/twitchapi.ts src/events.ts src/sockets/* src/sockets/eventsub/subscriptions/* src/utils/* --out ../documentation",
-    "pushnpm": "npm publish --access=public"
+    "pushnpm": "npm publish --access=public",
+    "test": "tsc"
   },
   "outDir": "build",
   "main": "build/twitchapi.js",
