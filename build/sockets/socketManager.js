@@ -7,6 +7,7 @@ var channelUpdate_1 = require("./eventsub/subscriptions/channelUpdate");
 var channelFollow_1 = require("./eventsub/subscriptions/channelFollow");
 var channelSubscribe_1 = require("./eventsub/subscriptions/channelSubscribe");
 var channelSubscriptionEnd_1 = require("./eventsub/subscriptions/channelSubscriptionEnd");
+var channelSubscriptionGift_1 = require("./eventsub/subscriptions/channelSubscriptionGift");
 var SocketManager = /** @class */ (function () {
     /**
      *
@@ -46,6 +47,10 @@ var SocketManager = /** @class */ (function () {
                 case intents_1.Intents.channelSubscriptionEnd:
                     var channelSubEnd = new channelSubscriptionEnd_1.ChannelSubscriptionEnd(props);
                     channelSubEnd.addChannelSubEnd().then(function (r) { });
+                    break;
+                case intents_1.Intents.channelSubscriptionGift:
+                    var channelSubGift = new channelSubscriptionGift_1.ChannelSubscriptionGift(props);
+                    channelSubGift.addChannelSubGif().then(function (r) { });
                     break;
             }
         });

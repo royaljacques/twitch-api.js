@@ -11,5 +11,6 @@ var Intents;
     Intents[Intents["ChannelFollow"] = 2] = "ChannelFollow";
     Intents[Intents["ChannelSubscribe"] = 3] = "ChannelSubscribe";
     Intents[Intents["channelSubscriptionEnd"] = 4] = "channelSubscriptionEnd";
+    Intents[Intents["channelSubscriptionGift"] = 5] = "channelSubscriptionGift";
 })(Intents = exports.Intents || (exports.Intents = {}));
 //# sourceMappingURL=intents.js.map
