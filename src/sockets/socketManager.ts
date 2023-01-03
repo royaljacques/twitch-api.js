@@ -4,6 +4,7 @@ import {ChannelUpdate} from "./eventsub/subscriptions/channelUpdate";
 import {ChannelFollow} from "./eventsub/subscriptions/channelFollow";
 import {ChannelSubscribe} from "./eventsub/subscriptions/channelSubscribe";
 import {ChannelSubscriptionEnd} from "./eventsub/subscriptions/channelSubscriptionEnd";
+import {ChannelSubscriptionGift} from "./eventsub/subscriptions/channelSubscriptionGift";
 export class SocketManager{
 
     private intents: Array<any>;
@@ -51,6 +52,10 @@ export class SocketManager{
                 case Intents.channelSubscriptionEnd:
                     let channelSubEnd = new ChannelSubscriptionEnd(props);
                     channelSubEnd.addChannelSubEnd().then(r => {});
+                    break;
+                case Intents.channelSubscriptionGift:
+                    let channelSubGift = new ChannelSubscriptionGift(props);
+                    channelSubGift.addChannelSubGif().then(r => {})
                     break;
             }
         })

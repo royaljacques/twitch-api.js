@@ -6,5 +6,6 @@ export enum Intents{
     ChanneUpdate= 1,
     ChannelFollow= 2,
     ChannelSubscribe=3,
-    channelSubscriptionEnd=4
+    channelSubscriptionEnd=4,
+    channelSubscriptionGift=5
 }
